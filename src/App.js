@@ -7,6 +7,7 @@ import ShopPage from "./pages/shop/shop.component";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up";
 import Header from "./components/header/header-component";
 import CheckOut from "./pages/checkout/checkout";
+import Contact from "./components/Contact/contact";
 export default function App() {
   const { currentUser } = useContext(Context);
   return (
@@ -24,6 +25,9 @@ export default function App() {
         </Route>
         <Route exact path="/checkout">
           <CheckOut />
+        </Route>
+        <Route exact path="/contact">
+          <Contact />
         </Route>
       </Switch>
     </div>

@@ -5,7 +5,7 @@ import "./header-style.scss";
 import { auth } from "../../Firebase/firebase.utils";
 import CartIcon from "../../components/cart-icon/cart-icon-component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown";
-import { ReactComponent as Logo } from "../../assets/crown.svg";
+import { ReactComponent as Logo } from "../../assets/logo.svg";
 
 export default function Header() {
   const { currentUser } = useContext(Context);
@@ -19,7 +19,7 @@ export default function Header() {
         <Link className="option" to="/shop">
           SHOP
         </Link>
-        <Link className="option" to="/shop">
+        <Link className="option" to="/contact">
           CONTACT
         </Link>
         {currentUser ? (

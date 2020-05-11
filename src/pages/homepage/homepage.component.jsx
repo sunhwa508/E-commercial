@@ -4,7 +4,8 @@ import "./homepage.style.scss";
 
 const HomePage = () => (
   <div className="homepage">
-    <h1>Welcome to my Homepage</h1>
+    <h1>WELCOME TO SUMAZON</h1>
+    <br />
     <Directory />
   </div>
 );
