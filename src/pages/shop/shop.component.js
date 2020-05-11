@@ -5,7 +5,7 @@ import CollectionOverview from "../../components/collection-overview/collection-
 
 export default function ShopPage() {
   const { url } = useRouteMatch();
-  console.log(url);
+
   return (
     <div className="shop-page">
       <Route exact path={`${url}`}>

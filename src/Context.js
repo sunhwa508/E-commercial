@@ -18,7 +18,7 @@ function ContextProvider({ children }) {
 
   useEffect(() => {
     const myobj = JSON.parse(localStorage.getItem("MyCART"));
-    console.log(myobj);
+
     setCartItems(myobj ? myobj : []);
   }, []);
 

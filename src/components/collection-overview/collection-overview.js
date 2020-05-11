@@ -5,7 +5,6 @@ import CollectionPreview from "../preview-collection.component/Collection.previe
 
 export default function CollectionOverview() {
   const { AllItems } = useContext(Context);
-  console.log(AllItems);
   return (
     <div className="collections-overview">
       {AllItems.map(({ id, ...othercollections }) => (
