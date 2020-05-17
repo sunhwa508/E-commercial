@@ -35,8 +35,9 @@ export const OptionsContainer = styled.div`
   justify-content: flex-end;
 
   @media screen and (max-width: 800px) {
-    padding: 10px;
+    padding: 25px 0;
     width: 70%;
+    font-size: 12px;
   }
 `;
 export const OptionLink = styled(Link)`

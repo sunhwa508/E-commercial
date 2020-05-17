@@ -6,6 +6,11 @@
   align-items: center;
   margin: 50px auto 0;
 
+  @media screen and (max-width: 800px) {
+    font-size: 10px;
+    width: 90%;
+  }
+
   .checkout-header {
     width: 100%;
     padding: 10px 0;
@@ -27,6 +32,10 @@
     margin-top: 30px;
     margin-left: auto;
     font-size: 36px;
+
+    @media screen and (max-width: 800px) {
+      font-size: 20px;
+    }
   }
   button {
     margin-top: 50px;
@@ -37,6 +46,11 @@
     margin: 40px 0;
     font-size: 18px;
     color: red;
+
+    @media screen and (max-width: 800px) {
+      font-size: 15px;
+      width: 100%;
+    }
   }
 }
 .question {
