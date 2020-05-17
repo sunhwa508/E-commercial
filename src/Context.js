@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { auth, createUserProfileDocument } from "./Firebase/firebase.utils";
+import { auth, createUserProfileDocument,addCollectionAndDocuments } from "./Firebase/firebase.utils";
 import SHOP_DATA from "./pages/shop/shop.data";
 import {
   addItemtoCart,

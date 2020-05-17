@@ -1,8 +1,14 @@
 import React, { useContext } from "react";
-import "./collection.scss";
 import { Context } from "../../Context";
 import { useParams } from "react-router-dom";
 import CollectionItem from "../../components/Collection-item/Collection-item";
+
+import {
+  CollectionPageContainer,
+  CollectionTitle,
+  CollectionItemsContainer,
+} from "./collection-styles";
+
 export default function Collection() {
   const { collectionId } = useParams();
   const { AllItems } = useContext(Context);
@@ -15,13 +21,13 @@ export default function Collection() {
   const { title, items } = Collections;
 
   return (
-    <div className="collection-page">
-      <h2 className="title">{title}</h2>
-      <div className="items">
+    <CollectionPageContainer>
+      <CollectionTitle>{title}</CollectionTitle>
+      <CollectionItemsContainer>
         {items.map((item) => (
           <CollectionItem key={item.name} {...item} />
         ))}
-      </div>
-    </div>
+      </CollectionItemsContainer>
+    </CollectionPageContainer>
   );
 }
