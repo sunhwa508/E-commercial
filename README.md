@@ -1,4 +1,4 @@
-**기존 튜토리얼 class형식 + redux 프로젝트를 응용하여, function(함수식) + useContext + hooks로 다시 코딩하였습니다.
+**class형식 + redux 튜토리얼 프로젝트를 참고하여, function(함수식) + useContext + hooks로 다시 코딩하였습니다.
 <h1>SUMAZON 😎😎</h1>
 
 ## Available Scripts
@@ -37,9 +37,9 @@ const config = {
 react환경구축
 NPM ? YARN 
 npm의 속도가 비교적 느렸던 그..때, npm을 보완하고자 만든게<br/> facebook의 yarn패키지 툴이라고 하는데요, <br/>
-사용빈도로 본다면 npm이 yarn보다 2배정도 더 사용되고 있다고하네요 ^^
-npm과 yarn의 속도 측면에서는 ..아주 미세한 차이로 yarn의 설치속도가 더 빨랐다고 합니다,
-하지만 이는 아주 미세한 차이이며 npm이 점점 그 간격을 좁히고 있따고하니.. 결론
+사용빈도로 본다면 npm이 yarn보다 2배정도 더 사용되고 있다고하네요 ^^ <br/>
+npm과 yarn의 속도 측면에서는 ..아주 미세한 차이로 yarn의 설치속도가 더 빨랐다고 합니다, <br/>
+하지만 이는 아주 미세한 차이이며 npm이 점점 그 간격을 좁히고 있따고하니.. 결론 <br/>
 
 아무거나 쓰자.😑
 
@@ -49,25 +49,25 @@ npm과 yarn의 속도 측면에서는 ..아주 미세한 차이로 yarn의 설�
 npm start 
 
 ## ✔firebase사용하여, user로그인 정보 저장하기, 확인하기
-firebase코드를 따로 관리하기위해 utils폴더 생성후 firebase.utils.js란 이름으로 파일생성
+firebase코드를 따로 관리하기위해 utils폴더 생성후 firebase.utils.js란 이름으로 파일생성 <br/>
   
-import firebase from "firebase/app";
-import "firebase/firestore"; //firestore에 접근, 데이터를 관리하기 위함
-import "firebase/auth";  //user 정보를 받아오고, 로그인 여부를 확인 할 수 있다.
+import firebase from "firebase/app"; <br/>
+import "firebase/firestore"; //firestore에 접근, 데이터를 관리하기 위함 <br/>
+import "firebase/auth";  //user 정보를 받아오고, 로그인 여부를 확인 할 수 있다. <br/>
 
-기본적으로 firebase에서 제공하는 3개의 요소를 import해줍니다.
+기본적으로 firebase에서 제공하는 3개의 요소를 import해줍니다. <br/>
 
-export const auth = firebase.auth();
-export const firestore = firebase.firestore();
-여기서 생성되는 로그정보들은 이제 각각 컴포넌들의 필요에 의해 import되어짐으로 export는 필수!
+export const auth = firebase.auth(); <br/>
+export const firestore = firebase.firestore(); <br/>
+여기서 생성되는 로그정보들은 이제 각각 컴포넌들의 필요에 의해 import되어짐으로 export는 필수! <br/>
 
 사실 지금 작성하는 firebase관련 코드들은 명세에 그대로 나와있기때문에 외우거나, <br/>이 코드들을 이용해 다른곳에 활용할 가능은..낮다.
-코드를 보고 이해하는정도면 충분할것이다 ^.^
+코드를 보고 이해하는정도면 충분할것이다 ^.^ <br/>
 
-우선 async await함수를 이용해 userAuth와 additionalData가 받아진 후, useRef.get()동작을 멈추어 비동기에서 발생할 수 있는 에러를 피한다.
+우선 async await함수를 이용해 userAuth와 additionalData가 받아진 후, useRef.get()동작을 멈추어 비동기에서 발생할 수 있는 에러를 피한다. <br/>
 
-//아래 코드를 요약한다면 userAuth,와 additionalData를 받은 후,  그 값이 firebase의 데이터와 같다면 리턴,
-그렇지 않다면 firebase의 userdata에 내용을 setting한다. 라는 말입니다.
+//아래 코드를 요약한다면 userAuth,와 additionalData를 받은 후,  그 값이 firebase의 데이터와 같다면 리턴, <br/>
+그렇지 않다면 firebase의 userdata에 내용을 setting한다. 라는 말입니다. <br/>
 <pre><code>
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
