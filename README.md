@@ -1,12 +1,13 @@
 **class형식 + redux 튜토리얼 프로젝트를 참고하여, function(함수식) + hooks로 Re코딩하였습니다.
 <h1>SUMAZON 😎😎</h1>
 
-## Available Scripts
-
 <div><center>
  <img src="https://user-images.githubusercontent.com/61695175/83273447-78993a00-a207-11ea-8aa3-2313924e305f.png" width="300" height="auto">
 <img src="https://user-images.githubusercontent.com/61695175/83273292-52739a00-a207-11ea-8c73-8cc5ef0839a1.png" width="300" height="auto">
 </div></center>
+## Available Scripts
+
+
 
 ## Getting Started
 npx create-react-app 리액트 앱 생성
