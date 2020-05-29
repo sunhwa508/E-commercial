@@ -1,4 +1,4 @@
-**기존 튜토리얼 class형식 + redux 이용 프로젝트이용하여, function(함수식) + useContext + hooks를 이용하여 코딩하였습니다.
+**기존 튜토리얼 class형식 + redux 프로젝트를 응용하여, function(함수식) + useContext + hooks로 다시 코딩하였습니다.
 <h1>SUMAZON 😎😎</h1>
 
 ## Available Scripts
