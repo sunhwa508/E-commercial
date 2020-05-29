@@ -8,11 +8,18 @@ import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up
 import Header from "./components/header/header-component";
 import CheckOut from "./pages/checkout/checkout";
 import Contact from "./components/Contact/contact";
-
+import { auth } from "./Firebase/firebase.utils";
 import { GlobalStyle } from "./global.styles";
 
 export default function App() {
-  const { currentUser } = useContext(Context);
+  const { currentUser, setCurrentUser } = useContext(Context);
+
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      setCurrentUser(user);
+      console.log(user);
+    });
+  }, []);
   return (
     <div>
       <GlobalStyle />
