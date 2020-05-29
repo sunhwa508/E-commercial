@@ -97,12 +97,12 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 ## ✔ firebase user정보를 가져와 로그인하기 (sign in)
 
 <h3>Signin.js</h3>
-자..이제 알수없는 코드들을 끝으로.. firebase에서 가져온 user정보를 활용해 sign in을 완성시켜 봅시다.
- const [user, setUser] = useState({ email: "", password: "" });
-user의 email과 password가 담길 state를 정의한 후,
+자..이제 알수없는 코드들을 끝으로.. firebase에서 가져온 user정보를 활용해 sign in을 완성시켜 봅시다. <br/>
+ const [user, setUser] = useState({ email: "", password: "" }); <br/>
+user의 email과 password가 담길 state를 정의한 후, <br/>
 
-auth의 signInWithEmailAndPassword에 받아온 email과 passwork를 넣어주어, 로그인 정보를 확인 해 줍니다.
-(firebase에 저장되어있는 user이 맞는지)
+auth의 signInWithEmailAndPassword에 받아온 email과 passwork를 넣어주어, 로그인 정보를 확인 해 줍니다. <br/>
+(firebase에 저장되어있는 user이 맞는지) <br/>
 
 <pre><code>
 
