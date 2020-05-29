@@ -60,7 +60,7 @@ import "firebase/auth";  //user 정보를 받아오고, 로그인 여부를 확�
 
 export const auth = firebase.auth(); <br/>
 export const firestore = firebase.firestore(); <br/>
-여기서 생성되는 로그정보들은 이제 각각 컴포넌들의 필요에 의해 import되어짐으로 export는 필수! <br/>
+여기서 생성되는 로그정보들은 이제 각각 컴포넌들의 필요에 의해 import되어지므로 export는 필수! <br/>
 
 사실 지금 작성하는 firebase관련 코드들은 명세에 그대로 나와있기때문에 외우거나, <br/>이 코드들을 이용해 다른곳에 활용할 가능은..낮다.
 코드를 보고 이해하는정도면 충분할것이다 ^.^ <br/>
