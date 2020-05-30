@@ -162,7 +162,6 @@ import { auth, createUserProfileDocument,addCollectionAndDocuments } from "./Fir
     unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
-
         userRef.onSnapshot((snapShot) => {
           setCurrentUser({
             id: snapShot.id,
@@ -172,7 +171,6 @@ import { auth, createUserProfileDocument,addCollectionAndDocuments } from "./Fir
       }
       setCurrentUser(userAuth);
     });
-
     return function cleanup() {
       unsubscribeFromAuth();
     };
