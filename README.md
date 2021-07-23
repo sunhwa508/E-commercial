@@ -16,6 +16,7 @@ npx create-react-app 리액트 앱 생성
 ### ✔Prerequisites
 SHOP_DATA json파일 준비! 이번 프로젝트는 AJAX통신이 아닌 json파일인 Shop-data.js 를 이용하여 진행하였다.<br/>
 firebase 회원가입후 app생성 후 config 생성<br/>
+```javascript
 <pre><code>
 const config = {
   apiKey: "",
@@ -29,6 +30,7 @@ const config = {
 };
 
 </pre></code>
+```
 이런 형식이 될것이다.
 
 이번 프로젝트는 gh-pages가 아닌 heroku를 통해 무료호스팅을 해볼 예정이다.
@@ -52,9 +54,11 @@ npm start
 ## ✔firebase사용하여, user로그인 정보 저장하기, 확인하기
 firebase코드를 따로 관리하기위해 utils폴더 생성후 firebase.utils.js란 이름으로 파일생성 <br/>
   
+```javascript
 import firebase from "firebase/app"; <br/>
 import "firebase/firestore"; //firestore에 접근, 데이터를 관리하기 위함 <br/>
 import "firebase/auth";  //user 정보를 받아오고, 로그인 여부를 확인 할 수 있다. <br/>
+```
 
 기본적으로 firebase에서 제공하는 3개의 요소를 import해줍니다. <br/>
 
@@ -69,6 +73,8 @@ export const firestore = firebase.firestore(); <br/>
 
 //아래 코드를 요약한다면 userAuth,와 additionalData를 받은 후,  그 값이 firebase의 데이터와 같다면 리턴, <br/>
 그렇지 않다면 firebase의 userdata에 내용을 setting한다. 라는 말입니다. <br/>
+
+```javascript
 <pre><code>
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
@@ -95,6 +101,8 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   return userRef; //userData를 참조한 Ref
 };
 </pre></code>
+```
+
 ## ✔ firebase user정보를 가져와 로그인하기 (sign in)
 
 <h3>Signin.js</h3>
@@ -105,6 +113,7 @@ user의 email과 password가 담길 state를 정의한 후, <br/>
 auth의 signInWithEmailAndPassword에 받아온 email과 passwork를 넣어주어, 로그인 정보를 확인 해 줍니다. <br/>
 (firebase에 저장되어있는 user이 맞는지) <br/>
 
+```javascript
 <pre><code>
 
   const handleSubmit = async (event) => {
@@ -117,10 +126,13 @@ auth의 signInWithEmailAndPassword에 받아온 email과 passwork를 넣어주�
     }
   };
 </pre></code>
+```
+
  만약 로그인 정보가 맞지 않다면 sign up을 이용해 정보를 등록해주어야 하겠죠?
  <h3>SignUp.js</h3>
  
  ## ✔ 회원가입 정보, firebase로 전달하여 저장하기 (sign up)
+```javascript
  <pre><code>
 import { auth, createUserProfileDocument } from "../../Firebase/firebase.utils";
 
@@ -152,7 +164,10 @@ import { auth, createUserProfileDocument } from "../../Firebase/firebase.utils";
     }
   };
   </pre></code>
+  ```
+  
  ## ✔ user정보 state에 담기(useContext)
+```javascript
  <pre><code>
 import { auth, createUserProfileDocument,addCollectionAndDocuments } from "./Firebase/firebase.utils";
 
@@ -176,7 +191,7 @@ import { auth, createUserProfileDocument,addCollectionAndDocuments } from "./Fir
     };
   }, []);
 </pre></code>
-
+```
 
 ## ✔Deployment (HEROKU)
  https://aamazon-live.herokuapp.com/
@@ -188,6 +203,7 @@ import { auth, createUserProfileDocument,addCollectionAndDocuments } from "./Fir
 
 
 ## ✔Versioning
+```javascript
 <ul>
   <li>"firebase": "^7.14.2",</li>
     <li>"node-sass": "^4.14.0",</li>
@@ -201,6 +217,7 @@ import { auth, createUserProfileDocument,addCollectionAndDocuments } from "./Fir
  <li>   "redux": "^4.0.5",</li>
   <li>  "styled-components": "^5.1.0"</li>
 </ul>
+```
 
 
 
