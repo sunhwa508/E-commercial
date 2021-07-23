@@ -203,7 +203,7 @@ import { auth, createUserProfileDocument,addCollectionAndDocuments } from "./Fir
 
 
 ## ✔Versioning
-```javascript
+
 <ul>
   <li>"firebase": "^7.14.2",</li>
     <li>"node-sass": "^4.14.0",</li>
@@ -217,7 +217,7 @@ import { auth, createUserProfileDocument,addCollectionAndDocuments } from "./Fir
  <li>   "redux": "^4.0.5",</li>
   <li>  "styled-components": "^5.1.0"</li>
 </ul>
-```
+
 
 
 
